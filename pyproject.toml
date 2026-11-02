@@ -1,0 +1,20 @@
+[project]
+name = "networking-crm"
+version = "1.0.0"
+description = "Outreach funnel CRM: Notion schema, funnel rules and a daily brief"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Ruslan Pushkar" }]
+dependencies = []
+
+[project.optional-dependencies]
+notion = ["notion-client>=2.2"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+crm = "crm.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

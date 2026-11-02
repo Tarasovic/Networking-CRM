@@ -1,0 +1,77 @@
+{
+  "_comment": "Synthetic demo data. Every person, note and date is fictional; company names are used only as realistic placeholders. Demo date: 2026-03-02 (a Monday).",
+  "targets": [
+    {"id": "t-spotify", "company": "Spotify", "team": "Corporate Strategy", "priority": "High", "notes": "Open role posted; application in progress."},
+    {"id": "t-airbus", "company": "Airbus", "team": "Corporate Development", "priority": "High", "notes": ""},
+    {"id": "t-airbus-treasury", "company": "Airbus", "team": "Treasury", "priority": "Low", "notes": "Added from an industry event; no names yet."},
+    {"id": "t-maersk", "company": "Maersk", "team": "Corporate Development", "priority": "High", "notes": "Strict one-at-a-time sequence, 2-day move-on."},
+    {"id": "t-unilever", "company": "Unilever", "team": "Strategy", "priority": "Medium", "notes": ""},
+    {"id": "t-siemens", "company": "Siemens", "team": "Investor Relations", "priority": "Medium", "notes": ""},
+    {"id": "t-philips", "company": "Philips", "team": "Strategy", "priority": "Low", "notes": ""},
+    {"id": "t-nestle", "company": "Nestlé", "team": "Business Development", "priority": "Medium", "notes": ""}
+  ],
+  "contacts": [
+    {"id": "c01", "name": "Lena Moreau", "seniority": "Analyst", "status": "Pending Response", "target_id": "t-spotify", "sequence": 1,
+     "last_reach_out": "2026-02-26", "notes": [
+       {"on": "2026-02-24", "text": "met at an industry event; connection request sent"},
+       {"on": "2026-02-25", "text": "connection accepted"},
+       {"on": "2026-02-26", "text": "first message sent on LinkedIn: asked for 15 minutes on the team's work"}]},
+    {"id": "c02", "name": "Marcus Hale", "seniority": "VP", "status": "Pending Reach-Out", "target_id": "t-spotify", "sequence": 2,
+     "after": "c01", "notes": [{"on": "2026-02-24", "text": "contact only after a chat with Lena"}]},
+
+    {"id": "c03", "name": "Priya Raman", "seniority": "Associate", "status": "Pending Response", "target_id": "t-airbus", "sequence": 1,
+     "last_reach_out": "2026-02-27", "follow_up_sent": true, "notes": [
+       {"on": "2026-02-24", "text": "first message sent on LinkedIn"},
+       {"on": "2026-02-27", "text": "follow-up sent on LinkedIn"}]},
+    {"id": "c04", "name": "Jonas Park", "seniority": "Associate", "status": "Pending Reach-Out", "target_id": "t-airbus", "sequence": 2,
+     "notes": [{"on": "2026-02-24", "text": "queued behind Priya"}]},
+
+    {"id": "c05", "name": "Chloé Martin", "seniority": "Analyst", "status": "Pending LinkedIn Connection", "target_id": "t-maersk", "sequence": 1,
+     "request_sent": "2026-02-27", "notes": [{"on": "2026-02-27", "text": "connection request sent"}]},
+    {"id": "c06", "name": "Samir Haddad", "seniority": "Analyst", "status": "Pending Reach-Out", "target_id": "t-maersk", "sequence": 2,
+     "next_action": "2026-03-01", "notes": [{"on": "2026-02-27", "text": "send a connection request if Chloé hasn't accepted within 2 days"}]},
+    {"id": "c07", "name": "Erik Santos", "seniority": "Analyst", "status": "Pending Reach-Out", "target_id": "t-maersk", "sequence": 3,
+     "notes": [{"on": "2026-02-27", "text": "send a connection request only if Samir hasn't accepted within 2 days"}]},
+
+    {"id": "c08", "name": "Maya Okafor", "seniority": "Associate", "status": "Died", "target_id": "t-unilever", "sequence": 1,
+     "last_reach_out": "2026-02-10", "follow_up_sent": true, "notes": [
+       {"on": "2026-02-07", "text": "first message sent"},
+       {"on": "2026-02-10", "text": "follow-up sent"},
+       {"on": "2026-02-14", "text": "marked Died: no reply after the follow-up"}]},
+    {"id": "c09", "name": "Hugo Laurent", "seniority": "Associate", "status": "Send the message!", "target_id": "t-unilever", "sequence": 2,
+     "notes": [{"on": "2026-02-28", "text": "connection accepted"}]},
+
+    {"id": "c10", "name": "Nora Ellis", "seniority": "Analyst", "status": "Pending LinkedIn Connection", "target_id": "t-siemens", "sequence": 1,
+     "request_sent": "2026-02-10", "notes": [{"on": "2026-02-10", "text": "connection request sent"}]},
+    {"id": "c11", "name": "Leo Fontaine", "seniority": "Analyst", "status": "Pending Response", "target_id": "t-siemens", "sequence": 1,
+     "last_reach_out": "2026-02-25", "notes": [{"on": "2026-02-25", "text": "first message sent by email"}]},
+
+    {"id": "c12", "name": "Felix Osei", "seniority": "Associate", "status": "Done", "target_id": "t-philips", "sequence": 1,
+     "last_reach_out": "2026-02-16", "notes": [
+       {"on": "2026-02-16", "text": "first message sent"},
+       {"on": "2026-02-18", "text": "replied; call booked for 2026-02-23"},
+       {"on": "2026-02-23", "text": "call held: team is hiring later in the year"}]},
+    {"id": "c13", "name": "Clara Visser", "seniority": "VP", "status": "Pending Reach-Out", "target_id": "t-philips", "sequence": 2,
+     "after": "c12", "notes": [{"on": "2026-02-16", "text": "contact only after a chat with Felix"}]},
+
+    {"id": "c14", "name": "Owen Price", "seniority": "Analyst", "status": "Pending Reach-Out", "target_id": "t-nestle", "sequence": 1,
+     "last_reach_out": "2026-02-20", "next_action": "2026-03-04", "notes": [
+       {"on": "2026-02-20", "text": "first message sent"},
+       {"on": "2026-02-21", "text": "replied: busy until month-end; contact again 2026-03-04"}]},
+    {"id": "c15", "name": "Ruth Adler", "seniority": "VP", "status": "Pending Reach-Out", "target_id": "t-nestle",
+     "notes": [{"on": "2026-02-21", "text": "added from a conference speaker list; order not decided yet"}]},
+
+    {"id": "c16", "name": "Tessa Grant", "seniority": "HR/Recruiter", "status": "Pending Reach-Out",
+     "next_action": "2026-03-02", "notes": [
+       {"on": "2026-01-12", "text": "headhunter at Northgate Search (fictional); covers strategy and corp dev roles"},
+       {"on": "2026-01-12", "text": "check in early March about spring openings"}]}
+  ],
+  "people": [
+    {"id": "p01", "name": "Greta Holm", "affiliation": "Maersk", "last_contact": "2025-11-20", "frequency_months": 3, "met": "In Person",
+     "notes": [{"on": "2025-11-20", "text": "coffee; promoted from the outreach log after a great call"}]},
+    {"id": "p02", "name": "Ravi Menon", "affiliation": "Philips", "last_contact": "2025-12-05", "frequency_months": 3, "met": "Video Chat",
+     "notes": [{"on": "2025-12-05", "text": "video call about the strategy team"}]},
+    {"id": "p03", "name": "Ada Kowal", "affiliation": "Siemens", "last_contact": "2026-01-15", "frequency_months": 12, "met": "In Person",
+     "notes": [{"on": "2026-01-15", "text": "met at an industry conference"}]}
+  ]
+}
